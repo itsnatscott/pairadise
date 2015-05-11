@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="/styles.css">
+<link href='http://fonts.googleapis.com/css?family=Exo+2:400,800italic' rel='stylesheet' type='text/css'>
+
+<title> Cool dudes</title>
+</head>
+<body>
+	<h1> Ordinary People</h1>
+	<h3> The truth is out there</h3>
+	<% if (muts) %>
+	<ul>
+	<% muts.each{|mut| %>
+		<li>
+		<a href="/mutants/<%=mut[0]%>"><h2><%=mut[1]%></h2></a></li>
+	<%}%>
+</ul>
+<%end%>
+<h3> Add a new 'ordinary person' </h3>
+<form action="/mutants" method="POST">
+<input type= "text" name= "new_name" placeholder="John Johnson">
+<input type="text" name="new_alias" placeholder="cool sounding word">
+<button> Enroll in Charles Xavier's school for the gifted</button>
+
+</body>
+</html>

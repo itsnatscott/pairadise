@@ -1,0 +1,24 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="/styles.css">
+<link href='http://fonts.googleapis.com/css?family=Exo+2:400,800italic' rel='stylesheet' type='text/css'>
+
+<title>Secret Identities!</title>
+</head>
+
+<body>
+	<h2> Mild mannered <i><span><%= mut[1] %></span></i> is also known<br> as the mutant hero <i><span><%= mut[2] %></span></i>.</h2>
+	<br>
+	
+		<form action="/mutants/<%=mut[0]%>" method="POST">
+		<input type="hidden" name="_method" value="DELETE">
+		<button class="deleting"> Are we destined to <br>destroy each other?</button>
+	</form>
+	<form action="/mutants/<%=mut[0]%>" method="POST">
+		<input type="hidden" name="_method" value="PUT">
+		<input type="text" value="<%=mut[1]%>" name="newname">
+		<input type="text" value="<%=mut[2]%>" name="newalias">
+		<button> Or can we change <br>who we are and unite?</button>
+	</form>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<title> Cool dudes Secret Identities!</title>
+</head>
+<body>
+	<h1> Ordinary People</h1>
+	<h3> The truth is out there</h3>
+	<% if (muts) %>
+	<ul>
+	<% muts.each{|mut| %>
+		<li>
+		<a href="<%=mut[0]%>"><h2><%=mut[1]%></h2></a></li>
+	<%}%>
+</ul>
+<%end%>
+</body>
+</html>
